@@ -1,0 +1,10 @@
+path: /path/to/chrysanthemum-dataset
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: Vegetative
+  1: Fruiting
+  2: Flowering
+  3: Harvest

@@ -1,0 +1,18 @@
+from ultralytics import YOLO
+import argparse
+
+p = argparse.ArgumentParser()
+p.add_argument("--weights", required=True)
+p.add_argument("--source", required=True)
+p.add_argument("--imgsz", type=int, default=640)
+p.add_argument("--conf", type=float, default=0.25)
+p.add_argument("--device", default=None)
+a = p.parse_args()
+
+YOLO(a.weights).predict(
+    source=a.source,
+    imgsz=a.imgsz,
+    conf=a.conf,
+    device=a.device,
+    save=True,
+)
